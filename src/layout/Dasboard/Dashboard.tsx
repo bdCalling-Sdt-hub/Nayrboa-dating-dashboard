@@ -65,7 +65,7 @@ const menuItems = [
     icon: <img src={mail} alt="" width={24} height={24}/>,
   },
   {
-    path: "/chat",
+    path: "/subscription",
     title: "Subscription",
     icon: <img src={subscription} alt="" width={24} height={24}/>,
   },

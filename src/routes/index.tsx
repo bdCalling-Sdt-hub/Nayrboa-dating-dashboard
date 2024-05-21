@@ -23,6 +23,7 @@ import TotalReview from "@/pages/TotalReview";
 import CreateEvents from "@/pages/CreateEvents";
 import VerifyEmail from "@/pages/VerifyEmail";
 import { createBrowserRouter } from "react-router-dom";
+import Subscription from "@/pages/Subscription";
 
 const router = createBrowserRouter([
   {
@@ -50,11 +51,13 @@ const router = createBrowserRouter([
         element: <TotalReview />,
       },
 
-      
-
       {
         path: "/email",
         element: <Email />,
+      },
+      {
+        path: "/subscription",
+        element: <Subscription />,
       },
       {
         path: "/make-admin",
