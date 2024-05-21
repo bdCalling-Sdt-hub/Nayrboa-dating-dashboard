@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import image from "../assets/user.jpg";
-import AdminModel from "@/components/MakeAdmin/AdminModel";
 import Title from "@/components/share/Title";
 import { Table } from "antd";
 import { Trash2 } from "lucide-react";
 import arrow from "@/assets/Frame.png"
+import EmailModel from "@/components/Email/EmailModal";
 
 const data = [...Array(15).keys()].map((item, index) => ({
   
@@ -91,7 +91,7 @@ const Email = () => {
       }}
       rowHoverable={false}
     />
-       <AdminModel open={open} setOpen={setOpen} />
+       <EmailModel open={open} setOpen={setOpen} />
   </div>
   );
 };
