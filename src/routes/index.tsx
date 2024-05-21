@@ -38,10 +38,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/user-details",
-        element: <UserDetails />,
+        element: <PurchasedPackageList />,
       },
       {
-        path: "/purchase-list",
+        path: "/user-list",
         element: <PurchasedPackageList />,
       },
       {
@@ -97,7 +97,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/change-password",
+        path: "/settings/change-password",
         element: <ChangePassword />,
       },
       {

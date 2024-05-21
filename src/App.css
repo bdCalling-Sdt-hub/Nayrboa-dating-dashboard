@@ -63,9 +63,10 @@ table {
 /* jodit editor */
 .jodit,
 .jodit-container * {
-  background: #2e2d2d !important;
-  color: wheat !important;
+  background: #1c2428!important;
+  color: white !important;
   border: none !important;
+  
 }
 
 .auth-wrapper {

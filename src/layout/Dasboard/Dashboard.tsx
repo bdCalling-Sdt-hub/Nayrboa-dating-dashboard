@@ -92,7 +92,7 @@ const menuItems = [
         title: "Privacy Policy",
       },
       {
-        path: "/privacy-policy",
+        path: "/change-password",
         title: "Change Password",
       },
       
@@ -134,11 +134,13 @@ const Dashboard = () => {
     <Layout>
       <Sider
         width={300}
+        
         className="sidebar-menu "
         style={{
           overflow: "auto",
           zIndex: 2,
           backgroundColor: "#232D32",
+          height:"100vh"
         }}
         trigger={null}
       >
@@ -247,7 +249,7 @@ const Dashboard = () => {
             background: "black",           
           }}
         >
-          <div className="  m-2 rounded p-3 ">
+          <div className="rounded p-3" style={{width:"100%"}}>
             <Outlet />
           </div>
         </Content>

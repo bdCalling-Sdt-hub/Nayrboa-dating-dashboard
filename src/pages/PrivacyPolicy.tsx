@@ -8,18 +8,18 @@ const PrivacyPolicy = () => {
   const [content, setContent] = useState("");
 
   return (
-    <div className="container">
-      <Title className="mb-4">Privacy Policy</Title>
-      <JoditEditor
-        ref={editor}
-        value={content}
-        config={{ height: 600 }}
-        onBlur={(newContent) => setContent(newContent)}
-      />
-      <div className="flex justify-end mt-5">
-        <Button>Save Changes</Button>
-      </div>
+    <div style={{backgroundColor:"#1c2428",margin:"15px",borderRadius:"5px"}}>
+    <Title className="mb-4 p-3">Privacy and policy</Title>
+    <JoditEditor
+      ref={editor}
+      value={content}
+      config={{ height: 600 }}
+      onBlur={(newContent) => setContent(newContent)}
+    />
+    <div className="flex justify-end" style={{margin:"10px",marginBottom:"20px"}}>
+      <Button >Save Changes</Button>
     </div>
+  </div>
   );
 };
 

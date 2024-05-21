@@ -2,23 +2,46 @@ import Title from "@/components/share/Title";
 import { Table } from "antd";
 import { useState } from "react";
 import image from "../assets/user.jpg";
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react' 
+import { Menu, MenuButton, MenuItem, MenuItems, Transition} from '@headlessui/react' 
 import filterbtn from '@/assets/filter.png'
 import downbtn from '@/assets/down.png'
+import { Dropdown,Button,Tag } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+const menu = (
+  <Menu>
+    <Menu.Item key="1">
+      <a href="#">View</a>
+    </Menu.Item>
+    <Menu.Item key="2">
+      <a href="#">Delete</a>
+    </Menu.Item>
+   
+  </Menu>
+);
 
-const data = [...Array(10).keys()].map((item, index) => ({
+const data = [...Array(8).keys()].map((item, index) => ({
   sId: index + 1,
   user: (
     <figure className="flex items-center gap-2">
       <img src={image} className="w-9 h-9 rounded" alt="" />
-      <figcaption>Fahim</figcaption>
+      <figcaption>Tushar</figcaption>
     </figure>
   ),
-  package: "Gold",
-  tId: "trx4574485541",
-  startDate: "2024-10-25",
-  endDate: "2025-10-25",
-  payment: "$15",
+  name: `Tushar ${index}`,
+  email: "tushar@gmail.com",
+  date: "2024-10-25",
+  location: "United state",
+  coin: `10${index}`,
+  states:['Active'],
+  action: (
+    <Dropdown overlay={menu} trigger={['click']}>
+      <Button onClick={e => e.preventDefault()}>
+        <DownOutlined />
+      </Button>
+    </Dropdown>
+  ),
+
+
 }));
 
 const PurchasedPackageList = () => {
@@ -26,39 +49,60 @@ const PurchasedPackageList = () => {
   const pageSize = 10;
   const columns = [
     {
-      title: "S.ID",
+      title: "S.N.",
       dataIndex: "sId",
       key: "sId",
     },
     {
-      title: "User",
-      dataIndex: "user",
-      key: "user",
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
     },
     {
-      title: "Package",
-      dataIndex: "package",
-      key: "package",
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    
+    {
+      title: "Date",
+      dataIndex: "date",
+      key: "date",
     },
     {
-      title: "T.ID",
-      dataIndex: "tId",
-      key: "tId",
+      title: "Locations",
+      dataIndex: "location",
+      key: "location",
     },
     {
-      title: "Start Date",
-      dataIndex: "startDate",
-      key: "startDate",
+      title: "Coins",
+      dataIndex: "coin",
+      key: "coin",
     },
     {
-      title: "End Dime",
-      dataIndex: "endDate",
-      key: "endDate",
+      title: "State",
+      dataIndex: "states",
+      key: ["Active"],
+      render: (_, { states }) => (
+        <>
+          {states?.map((state) => {
+            let color;
+            if (state === 'Active') {
+              color = 'red';
+            }
+            return (
+              <Tag color={color} key={state}>
+                {state.toUpperCase()}
+              </Tag>
+            );
+          })}
+        </>
+      ),
     },
     {
-      title: "Payment",
-      dataIndex: "payment",
-      key: "payment",
+      title: "Actions",
+      dataIndex: "action",
+      key: "action",
     },
   ];
   const handlePage = (page: any) => {
