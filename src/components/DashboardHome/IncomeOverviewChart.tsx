@@ -64,10 +64,18 @@ const IncomeOverviewChart = () => {
       <Title className=" mb-5">Subscription Growth</Title>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart height={300} data={data} barSize={20}>
+
+        <defs>
+        <linearGradient id="colorAmt" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#dd1122" stopOpacity={1} />
+          <stop offset="95%" stopColor="#dd1122" stopOpacity={0.5} />
+        </linearGradient>
+      </defs>
+
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Bar dataKey="amt" fill="#DD1122" radius={[20, 20, 0, 0]} />
+          <Bar dataKey="amt" fill="url(#colorAmt)" radius={[20, 20, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

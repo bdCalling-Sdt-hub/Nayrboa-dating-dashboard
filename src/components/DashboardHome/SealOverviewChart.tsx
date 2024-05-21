@@ -64,10 +64,16 @@ const SealOverviewChart = () => {
       <Title className=" mb-5">Monthly Growth</Title>
       <ResponsiveContainer width="100%" className="h-[300px]" height={300}>
         <AreaChart data={data} syncId="anyId">
+        <defs>
+        <linearGradient id="colorAmt" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#dd1122" stopOpacity={1} />
+          <stop offset="95%" stopColor="#dd1122" stopOpacity={0.5} />
+        </linearGradient>
+      </defs>
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Area type="monotone" dataKey="amt" stroke="#00D6FF" fill="#00D6FF" />
+          <Area type="monotone" dataKey="amt" stroke="#dd1122" fill="url(#colorAmt)" />
         </AreaChart>
       </ResponsiveContainer>
     </div>
