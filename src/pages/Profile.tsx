@@ -18,8 +18,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-2/4 mx-auto">
-      <div className="text-center bg-base p-4 rounded mb-5">
+    <div style={{backgroundColor:"#232D32",padding:"30px",height:"800px",borderRadius:"5px",margin:"10px"}}>
+       <div className="w-2/4 mx-auto mt-5">
+      <div className="text-center  p-4 rounded mb-5" style={{backgroundColor:"#29363C"}}>
         {!openEdit && (
           <div className="flex justify-end">
             <button className="text-blue" onClick={() => setOpenEdit(true)}>
@@ -180,6 +181,7 @@ const Profile = () => {
             </Row>
             <Form.Item>
               <Button
+               onClick={() => setOpenEdit(false)}
                 type="primary"
                 className="bg-secondary h-10 text-lg"
                 htmlType="submit"
@@ -191,6 +193,8 @@ const Profile = () => {
         )}
       </div>
     </div>
+  </div>
+   
   );
 };
 

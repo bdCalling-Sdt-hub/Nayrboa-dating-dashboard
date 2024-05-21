@@ -97,7 +97,7 @@ const menuItems = [
       },
       
       {
-        path: "/faq",
+        path: "/profile",
         title: "Profile",
       },
     ],

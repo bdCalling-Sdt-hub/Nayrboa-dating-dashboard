@@ -6,7 +6,7 @@ import ChangePassword from "@/pages/ChangePassword";
 import Email from "@/pages/Email";
 
 import DashboardHome from "@/pages/DashboardHome";
-import FAQPage from "@/pages/FAQ";
+import ProfilePage from "@/pages/Profile";
 import ForgetPassword from "@/pages/ForgetPassword";
 import Login from "@/pages/Login";
 import MakeAdmin from "@/pages/MakeAdmin";
@@ -87,8 +87,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/settings/faq",
-        element: <FAQPage />,
+        path: "/settings/profile",
+        element: <ProfilePage/>,
       },
 
       {
