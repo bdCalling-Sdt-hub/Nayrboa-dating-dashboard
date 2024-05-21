@@ -62,7 +62,7 @@ const MakeAdmin = () => {
   return (
     <div>
      
-      <div className="flex justify-between items-center pb-10 pt-4 bg-[#232D32] px-3">
+      <div className="flex justify-between items-center pb-5 pt-4  px-3">
       <h1 className="text-white text-2xl">Make Admin</h1>
         <Button onClick={showModal} icon={<Plus size={18} />}>
           Add Admin

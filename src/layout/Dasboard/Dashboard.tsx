@@ -25,7 +25,7 @@ const menuItems = [
     icon: <LayoutDashboard width={24} height={24} />,
   },
   {
-    path: "/user-details",
+    path: "/totalUser",
     title: "Total User ",
     icon: <User2 width={24} height={24} />,
   },
@@ -50,17 +50,17 @@ const menuItems = [
     // ],
   },
   {
-    path: "/training-program",
+    path: "/createEvents",
     title: "Create an events",
     icon: <img src={Calendar} alt="" width={24} height={24}/>,
   },
   {
-    path: "/training-articles",
+    path: "/totalReview",
     title: "Total Review",
     icon: <img src={review} alt="" width={24} height={24}/>,
   },
   {
-    path: "/chat",
+    path: "/email",
     title: "Email",
     icon: <img src={mail} alt="" width={24} height={24}/>,
   },
