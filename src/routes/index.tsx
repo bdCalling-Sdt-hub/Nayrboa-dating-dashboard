@@ -3,7 +3,7 @@ import Dashboard from "@/layout/Dasboard/Dashboard";
 import About from "@/pages/About";
 
 import ChangePassword from "@/pages/ChangePassword";
-import Chat from "@/pages/Chat";
+import Email from "@/pages/Email";
 
 import DashboardHome from "@/pages/DashboardHome";
 import FAQPage from "@/pages/FAQ";
@@ -16,16 +16,14 @@ import Slider from "@/pages/Slider";
 
 import SetNewPassword from "@/pages/SetNewPassword";
 import Settings from "@/pages/Settings";
-import UserDetails from "@/pages/UserDetails";
-
-import Packages from "@/pages/Packages";
-import PromoCode from "@/pages/PromoCode";
+import TotalUser from "@/pages/TotalUser";
 import PurchasedPackageList from "@/pages/PurchasedList";
 import TermsAndCondition from "@/pages/TermsAndCondition";
-import TrainingArticle from "@/pages/TrainingArticle";
-import TrainingProgram from "@/pages/TrainingProgram";
+import TotalReview from "@/pages/TotalReview";
+import CreateEvents from "@/pages/CreateEvents";
 import VerifyEmail from "@/pages/VerifyEmail";
 import { createBrowserRouter } from "react-router-dom";
+import Subscription from "@/pages/Subscription";
 
 const router = createBrowserRouter([
   {
@@ -37,34 +35,31 @@ const router = createBrowserRouter([
         element: <DashboardHome />,
       },
       {
+
         path: "/user-details",
         element: <PurchasedPackageList />,
+
       },
       {
         path: "/user-list",
         element: <PurchasedPackageList />,
       },
       {
-        path: "/training-program",
-        element: <TrainingProgram />,
+        path: "/createEvents",
+        element: <CreateEvents />,
       },
       {
-        path: "/training-articles",
-        element: <TrainingArticle />,
-      },
-
-      {
-        path: "/manages/promo-code",
-        element: <PromoCode />,
-      },
-      {
-        path: "/manages/packages",
-        element: <Packages />,
+        path: "/totalReview",
+        element: <TotalReview />,
       },
 
       {
-        path: "/chat",
-        element: <Chat />,
+        path: "/email",
+        element: <Email />,
+      },
+      {
+        path: "/subscription",
+        element: <Subscription />,
       },
       {
         path: "/make-admin",

@@ -45,10 +45,12 @@ table {
   background:transparent !important;
   color: white;
   border: 0 !important;
+  text-align: center;
 }
 
 .ant-table-wrapper .ant-table-tbody > tr > td {
   border:none;
+  text-align: center;
 }
 
 .ant-modal .ant-modal-content {
