@@ -80,7 +80,7 @@ const menuItems = [
         title: "About Us",
       },
       {
-        path: "/slider",
+        path: "/contact",
         title: "Contact Us",
       },
       {

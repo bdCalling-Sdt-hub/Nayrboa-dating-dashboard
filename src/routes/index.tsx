@@ -12,7 +12,7 @@ import Login from "@/pages/Login";
 import MakeAdmin from "@/pages/MakeAdmin";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Profile from "@/pages/Profile";
-import Slider from "@/pages/Slider";
+import Contact from "@/pages/Contact";
 
 import SetNewPassword from "@/pages/SetNewPassword";
 import Settings from "@/pages/Settings";
@@ -73,8 +73,8 @@ const router = createBrowserRouter([
         element: <Settings />,
       },
       {
-        path: "/settings/slider",
-        element: <Slider />,
+        path: "/settings/contact",
+        element: <Contact />,
       },
       {
         path: "/settings/terms-and-conditions",
