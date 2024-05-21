@@ -3,7 +3,7 @@
 import Button from "@/components/share/Button";
 import Title from "@/components/share/Title";
 import { Form, Input } from "antd";
-// import { Image } from "lucide-react"; 
+
 import { useState } from "react";
 import imgURL from "@/assets/imgURL.png"
 
@@ -22,16 +22,16 @@ const TrainingProgram = () => {
     setImageUrl(url);
   };
   return (
-    <div className=" bg-[#1C2428] me-[50px]  mb-[50px] mt-[14px] pt-[58px] ps-[36px]">
-      <Title className="pb-">Create an events</Title>
+    <div className=" bg-[#1C2428] me-[50px]  mb-[50px] mt-[14px] pt-[58px] ps-[40px] pe-[120px] rounded">
+      <Title className="pb-5 ">Create an events</Title>
       
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-10">
       
         <div className=" grid-cols-6">
         <Form onFinish={onFinish} layout="vertical">
         <Form.Item
             name="name"
-            label={<p className="text-white text-lg ">Events  Name</p>}
+            label={<p className="text-white text-md ">Events  Name</p>}
           >
             <Input
               placeholder="Events  Name"
@@ -42,7 +42,7 @@ const TrainingProgram = () => {
 
           <Form.Item
             name="host"
-            label={<p className="text-white text-lg ">Hosted by</p>}
+            label={<p className="text-white text-md ">Hosted by</p>}
           >
             <Input
               placeholder="Hosted by"
@@ -54,7 +54,7 @@ const TrainingProgram = () => {
           <Form.Item
             name=" startDate"
             
-            label={<p className="text-white text-lg ">Start Date</p>}
+            label={<p className="text-white text-md ">Start Date</p>}
           >
             <Input
               placeholder="mm/dd/yy"
@@ -69,7 +69,7 @@ const TrainingProgram = () => {
           <Form.Item
             name=" endDate"
             
-            label={<p className="text-white text-lg ">End Date</p>}
+            label={<p className="text-white text-md ">End Date</p>}
           >
             <Input
               placeholder="mm/dd/yy"
@@ -83,7 +83,7 @@ const TrainingProgram = () => {
 
           <Form.Item
             name="eventType"
-            label={<p className="text-white text-lg ">Event Type</p>}
+            label={<p className="text-white text-md ">Event Type</p>}
           >
             <Input
               placeholder="onsite"
@@ -94,7 +94,7 @@ const TrainingProgram = () => {
 
           <Form.Item
             name="location"
-            label={<p className="text-white text-lg ">Location</p>}
+            label={<p className="text-white text-md ">Location</p>}
           >
             <Input
               placeholder="location.."
@@ -105,37 +105,39 @@ const TrainingProgram = () => {
 
           <Form.Item
             name="name"
-            label={<p className="text-white text-lg ">Description</p>}
+            label={<p className="text-white text-md ">Description</p>}
           >
-         <textarea name="postContent" rows={4} cols={40} />
+         <textarea name="description" placeholder="Write here" rows={5} cols={40} className="bg-[#2E3C43] w-full border rounded-lg text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent placeholder:ps-2" />
           </Form.Item>
 
           </Form>
         </div>
 
         <div className=" grid-cols-6">
+        <Form onFinish={onFinish} layout="vertical"> 
         <Form.Item
-            name="name"
-            label={<p className="text-white text-lg ">Full Name</p>}
-          >
+            name="category"
+            label={<p className="text-white text-md ">Category</p>}
+          > 
             <Input
-              placeholder="Enter full name"
+              placeholder="music"
               className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent"
               size="large"
             />
-          </Form.Item> 
+          </Form.Item>
+
   
           <div>
-       <h2 className="text-md mb-2">Training Program Thumbnail</h2>
+       <h2 className="text-white text-lg mb-2 ">Event Image</h2>
        <input
-         type="file"
-         className=" hidden"
-         id="image"
+        
+         className=" bg-transparent"
+    
          onChange={handleImage}
        />
        <label
          htmlFor="image"
-         className="w-full border rounded flex justify-center items-center h-36 cursor-pointer"
+         className="w-full border-2 border-[#2E3C43] rounded-lg flex justify-center items-center h-[340px] cursor-pointer"  onChange={handleImage}
        >
          {imageUrl ? (
            <img
@@ -144,10 +146,11 @@ const TrainingProgram = () => {
              alt=""
            />
          ) : (
-           <img src={imgURL} alt="" className="text-white "/>
+           <img src={imgURL} alt=""    className="w-[194px] h-[194px] "/>
          )}
        </label>
      </div>
+     </Form>
         </div>
       
       <div>
