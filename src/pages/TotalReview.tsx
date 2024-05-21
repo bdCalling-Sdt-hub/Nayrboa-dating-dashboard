@@ -17,7 +17,7 @@ const data = [...Array(12).keys()].map((item, index) => ({
   email: "mithila@gmail.com" ,
   date: "December 9,2024" ,
   location: "Bangladesh" ,
-  rating: <div className=" flex  gap-2 items-center"> <img src={rating} className="w-4 h-4 rounded" alt="" /> <span> (4.5)</span> </div> ,
+  rating: <div className=" flex  gap-2 items-center text-center"> <img src={rating} className="w-4 h-4 rounded" alt="" /> <span> (4.5)</span> </div> ,
  
   action: {
     sId: index + 1,

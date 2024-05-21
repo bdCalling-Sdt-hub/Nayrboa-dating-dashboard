@@ -12,9 +12,9 @@ import Searchbtn from '@/assets/Search.png'
 
 const data = [...Array(9).keys()].map((item, index) => ({
   sId: index + 1,
-  image: <img src={image} className="w-9 h-9 rounded" alt="" />,
+  image: <img src={image} className="w-9 h-9 rounded mx-auto" alt="" />,
   name: "Fahim",
-  email: "fahim@gmail.com",
+  email:  "fahim@gmail.com",
   status: "active",
   action: {
     sId: index + 1,

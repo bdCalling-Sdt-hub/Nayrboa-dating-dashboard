@@ -24,11 +24,13 @@ import CreateEvents from "@/pages/CreateEvents";
 import VerifyEmail from "@/pages/VerifyEmail";
 import { createBrowserRouter } from "react-router-dom";
 import Subscription from "@/pages/Subscription";
+import ErrorPage from "@/pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
+    errorElement: <ErrorPage />, 
     children: [
       {
         path: "/",
