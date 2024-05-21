@@ -25,7 +25,7 @@ const menuItems = [
     icon: <LayoutDashboard width={24} height={24} />,
   },
   {
-    path: "/totalUser",
+    path: "/user-details",
     title: "Total User ",
     icon: <User2 width={24} height={24} />,
   },

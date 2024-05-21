@@ -91,7 +91,7 @@ const Email = () => {
       }}
       rowHoverable={false}
     />
-       <EmailModel open={open} setOpen={setOpen} />
+     <EmailModel open={open} setOpen={setOpen} />
   </div>
   );
 };
