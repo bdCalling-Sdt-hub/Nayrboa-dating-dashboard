@@ -16,11 +16,14 @@ const TrainingProgram = () => {
   const onFinish = (valeus: any) => {
     console.log(valeus);
   };
-  const handleImage = (e: any) => {
+  const handleImage = (e) => {
     const file = e.target.files?.[0];
-    const url = URL.createObjectURL(file);
-    setImageUrl(url);
+    if (file) {
+      const url = URL.createObjectURL(file);
+      setImageUrl(url);
+    }
   };
+
   return (
     <div className=" bg-[#1C2428] me-[50px]  mb-[50px] mt-[14px] pt-[58px] ps-[40px] pe-[120px] rounded" style={{height:"98%",overflow:"scroll"}}>
       <Title className="pb-5 ">Create an events</Title>
@@ -121,34 +124,38 @@ const TrainingProgram = () => {
           > 
             <Input
               placeholder="music"
-              className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent"
+              className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent "
               size="large"
             />
           </Form.Item>
 
   
           <div>
-       <h2 className="text-white text-lg mb-2 ">Event Image</h2>
-       <input
-        
-         className=" bg-transparent"
-    
-         onChange={handleImage}
-       />
-       <label
-         htmlFor="image"
-         className="w-full border-2 border-[#2E3C43] rounded-lg flex justify-center items-center h-[340px] cursor-pointer"  onChange={handleImage}
-       >
-         {imageUrl ? (
-           <img
-             src={imageUrl}
-             className="w-full h-full object-cover rounded"
-             alt=""
-           />
-         ) : (
-           <img src={imgURL} alt=""    className="w-[194px] h-[194px] "/>
-         )}
-       </label>
+          <h2 className="text-white text-lg mb-2">Event Image</h2>
+      <input
+        type="file"
+        accept="image/*" 
+        className="bg-transparent mb-2 file-white"
+        onChange={handleImage}
+      />
+      <label
+        htmlFor="image"
+        className="w-full border-2 border-[#2E3C43] rounded-lg flex justify-center items-center h-[340px] cursor-pointer"
+      >
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            className="w-full h-full object-cover rounded"
+            alt=""
+          />
+        ) : (
+          <img
+            src={imgURL}
+            alt=""
+            className="w-[194px] h-[194px]"
+          />
+        )}
+      </label>
      </div>
 
      <Flex vertical gap="small" style={{ width: '100%' }}>
