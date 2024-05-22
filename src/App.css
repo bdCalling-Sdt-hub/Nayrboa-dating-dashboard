@@ -74,8 +74,7 @@ table {
 .auth-wrapper {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(#2e2d2dc0, #2e2d2dd2), url("./assets/bg.png");
-  background-repeat: no-repeat;
+  background: black;
   background-size: cover;
 }
 
