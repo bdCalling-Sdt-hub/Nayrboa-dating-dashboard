@@ -87,3 +87,7 @@ table {
 ::placeholder {
   color: #a19e9e !important;
 }
+
+:where(.css-dev-only-do-not-override-11xg00t).ant-table-wrapper table {
+    border-radius: 0px 0px 0px 0px !important;
+}
