@@ -8,7 +8,7 @@ const AuthWrapper = ({
   className?: string;
 }) => {
   return (
-    <div className={`w-1/4 bg-white p-8 rounded ${className}`}>{children}</div>
+    <div className={`w-1/4 bg-[#1C2428] p-8 rounded-lg ${className}`}>{children}</div>
   );
 };
 

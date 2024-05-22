@@ -1,19 +1,16 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import SliderModel from "@/components/Slider/SliderModel";
+
 import Button from "@/components/share/Button";
 import Title from "@/components/share/Title";
 import { useState } from "react";
-import image from "../assets/banner.png"; 
 import phnImg from '@/assets/phnImg.png'
 import mail from '@/assets/mail.png'
 import edit from '@/assets/edit.png'
+import ContactModal from "@/components/Contact/ContactModal";
 
-
-const Slider = () => {
-
+const Contact = () => {
   const [open, setOpen] = useState(false);
-  const showModal = () => {
+   const showModal = () => {
     setOpen(true);
   };
 
@@ -70,8 +67,10 @@ const Slider = () => {
           Add Number 
         </Button>
       </div>
+ {/* modal  */}
+      <ContactModal open={open}  setOpen={setOpen}  />
 
-      
+
 <div className=" flex  items-center gap-3 pb-10">
 <div className="flex gap-3 items-center  p-2 ps-4 pe-4 bg-[#232D32] rounded">
         <img src={mail} alt="" className=" w-12 h-12 p-2  bg-red-700  text-white rounded-full" />
@@ -110,6 +109,7 @@ const Slider = () => {
       </div>
       <img src={edit} alt="" className="w-14 h-14 p-2  bg-[#F9E6E6]   rounded-full" />
 </div>
+
 <div className=" flex  items-center gap-3 pb-10">
 <div className="flex gap-3 items-center  p-2 ps-4 pe-4 bg-[#232D32] rounded">
         <img src={mail} alt="" className=" w-12 h-12 p-2  bg-red-700  text-white rounded-full" />
@@ -153,4 +153,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Contact;
