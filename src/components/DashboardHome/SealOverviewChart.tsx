@@ -62,7 +62,7 @@ const SealOverviewChart = () => {
   return (
     <div className="bg-[#232D32] rounded p-4 text-gray-300">
       <Title className=" mb-5">Monthly Growth</Title>
-      <ResponsiveContainer width="100%" className="h-[300px]" height={300}>
+      <ResponsiveContainer width="100%" className="h-[300px]" height={270}>
         <AreaChart data={data} syncId="anyId">
         <defs>
         <linearGradient id="colorAmt" x1="0" y1="0" x2="0" y2="1">

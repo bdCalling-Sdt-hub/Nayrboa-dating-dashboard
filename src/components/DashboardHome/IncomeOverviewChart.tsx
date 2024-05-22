@@ -62,7 +62,7 @@ const IncomeOverviewChart = () => {
   return (
     <div className="bg-[#232D32] rounded p-4 ">
       <Title className=" mb-5">Subscription Growth</Title>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={270}>
         <BarChart height={300} data={data} barSize={20}>
 
         <defs>
