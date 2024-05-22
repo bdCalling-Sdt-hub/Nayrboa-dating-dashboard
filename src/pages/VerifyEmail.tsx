@@ -16,6 +16,7 @@ const VerifyEmail = () => {
   };
   return (
     <AuthWrapper>
+      <div>
       <div className="text-center mb-12">
         <Title>Check your email</Title>
         <p className="text-[#F7F7F7]">We sent a reset link to contact@dscode...com
@@ -43,6 +44,8 @@ enter 5 digit code that mentioned in the email</p>
           Resend
         </Button>
       </p>
+      </div>
+    
     </AuthWrapper>
   );
 };
