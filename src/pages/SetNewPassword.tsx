@@ -10,37 +10,48 @@ const SetNewPassword = () => {
     navigate("/auth/login");
   };
   return (
-    <AuthWrapper>
-      <div className="text-center mb-12">
-        <Title>Set a new password</Title>
-        <p>
-          Create a new password. Ensure it differs from previous ones for
-          security
-        </p>
-      </div>
+    <AuthWrapper> 
+      <div className="h-[620px]">
+      <div className="text-center mb-4 mt-16 ">
+        <Title className=" ">Set a new password</Title>
+        <p className="text-[#F7F7F7] mt-6 mb-10">Create a new password. Ensure it differs from
+previous ones for security</p>
+      </div> 
       <Form layout="vertical" onFinish={onFinish}>
-        <Form.Item label="New password" name="password">
-          <Input.Password
-            placeholder="Write new password"
-            style={{ height: "50px" }}
-          />
-        </Form.Item>
-        <Form.Item label="Confirm Password" name="confirmPassword">
-          <Input.Password
-            placeholder="Write confirm password"
-            style={{ height: "50px" }}
-          />
-        </Form.Item>
+        
+        <Form.Item
+            name="password"
+            label={<p className="text-white text-lg ">New password</p>}
+          >
+            <Input.Password
+              placeholder="Write new password"
+              className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent mb-5"
+              size="large"
+              name="password"
+            />
+          </Form.Item>
+          
+          <Form.Item
+            name="confirmPassword"
+            label={<p className="text-white text-lg ">Confirm Password</p>}
+          >
+            <Input.Password
+              placeholder="Write confirm password"
+              className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent"
+              size="large"
+              name="password"
+            />
+          </Form.Item>
 
         <Form.Item>
-          <Button
-            className="bg-secondary h-12 text-white text-lg w-full mt-6"
-            htmlType="submit"
-          >
-            Sign In
-          </Button>
+        <button
+            className="bg-red-600 h-12 text-white text-lg w-full   rounded-lg  mt-14 "  >
+          Reset Password
+          </button>
         </Form.Item>
       </Form>
+      </div>
+     
     </AuthWrapper>
   );
 };

@@ -59,7 +59,11 @@ table {
 }
 
 .ant-otp-input {
-  height: 80px;
+  height: 70px;
+  background-color: #1C2428 !important;
+ color: #fff;
+ font-weight: 400;
+ text-align: center;
 }
 
 /* jodit editor */

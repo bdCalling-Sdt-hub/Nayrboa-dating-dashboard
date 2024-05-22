@@ -22,6 +22,7 @@ import TermsAndCondition from "@/pages/TermsAndCondition";
 import TotalReview from "@/pages/TotalReview";
 import CreateEvents from "@/pages/CreateEvents";
 import VerifyEmail from "@/pages/VerifyEmail";
+import ResetPassword from "@/pages/ResetPassword";
 import { createBrowserRouter } from "react-router-dom";
 import Subscription from "@/pages/Subscription";
 import ErrorPage from "@/pages/ErrorPage";
@@ -119,6 +120,10 @@ const router = createBrowserRouter([
       {
         path: "/auth/verify",
         element: <VerifyEmail />,
+      },
+      {
+        path: "/auth/reset",
+        element: <ResetPassword />,
       },
       {
         path: "/auth/set-new-password",
