@@ -110,8 +110,8 @@ const PurchasedPackageList = () => {
   };
 
   return (
-    <div className="bg-[#232D32] rounded p-4 mt-2 ">
-      <Title className=" mb-3">Purchased Package List</Title>
+    <div className="bg-[#232D32] rounded p-4 mt-2 "  style={{height:"98%",overflow:"scroll"}}>
+      <Title className=" mb-3">Total user list</Title>
           {/* start  Search bar , filter , date   */}
       <div className=" flex justify-between items-center px-0 pr-5"
           style={{ 

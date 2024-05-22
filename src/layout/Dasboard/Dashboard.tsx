@@ -236,7 +236,7 @@ const Dashboard = () => {
             
           >
             <img src={person} alt="" width={22} height={22}  />
-          <p>  Schedule</p> 
+          <p>  Tushar</p> 
           </div> 
               
            
@@ -246,11 +246,12 @@ const Dashboard = () => {
        
         <Content
           style={{
-            background: "black",           
+            background: "black",   
+                 
           }}
         >
-          <div className="rounded p-3" style={{width:"100%"}}>
-            <Outlet />
+          <div className="rounded p-5" style={{width:"100%",height:"89vh"}}>
+            <Outlet/>
           </div>
         </Content>
       </Layout>

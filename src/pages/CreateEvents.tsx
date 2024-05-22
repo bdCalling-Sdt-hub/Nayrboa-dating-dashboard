@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Button from "@/components/share/Button";
+//import Button from "@/components/share/Button";
 import Title from "@/components/share/Title";
-import { Form, Input } from "antd";
+import { Form, Input,Button,Flex } from "antd";
 
 import { useState } from "react";
 import imgURL from "@/assets/imgURL.png"
@@ -22,7 +22,7 @@ const TrainingProgram = () => {
     setImageUrl(url);
   };
   return (
-    <div className=" bg-[#1C2428] me-[50px]  mb-[50px] mt-[14px] pt-[58px] ps-[40px] pe-[120px] rounded">
+    <div className=" bg-[#1C2428] me-[50px]  mb-[50px] mt-[14px] pt-[58px] ps-[40px] pe-[120px] rounded" style={{height:"98%",overflow:"scroll"}}>
       <Title className="pb-5 ">Create an events</Title>
       
       <div className="grid grid-cols-2 gap-10">
@@ -150,6 +150,14 @@ const TrainingProgram = () => {
          )}
        </label>
      </div>
+
+     <Flex vertical gap="small" style={{ width: '100%' }}>
+       <Button type="primary" block style={{height:"50px",backgroundColor:"red",marginTop:"10px",fontSize:"18px",fontWeight:"bold"}}>
+     
+         Save event
+       </Button>
+    </Flex>
+     
      </Form>
         </div>
       

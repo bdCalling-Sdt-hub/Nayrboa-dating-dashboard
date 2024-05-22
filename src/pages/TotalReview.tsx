@@ -90,7 +90,7 @@ const TrainingArticle = () => {
   };
 
   return (
-    <div className=" bg-[#232D32] p-5 rounded">
+    <div className=" bg-[#232D32] p-5 rounded"  style={{height:"98%",overflow:"scroll"}}>
       <div className="flex justify-between items-center mb-5 ">
       <Title>Total Review</Title>
 

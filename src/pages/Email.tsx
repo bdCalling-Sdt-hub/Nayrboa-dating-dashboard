@@ -76,8 +76,8 @@ const Email = () => {
 
 
   return (
-    <div>
-    <Title> Total User List</Title>
+    <div style={{backgroundColor:"#232d32",borderRadius:"5px",height:"98%",overflow:"scroll"}}>
+    <h1 class="text-xl text-gray-300" style={{paddingLeft:"20px",paddingTop:"20px",marginBottom:"20px",fontWeight:"bold"}}>Email</h1>
   
     <Table
     
