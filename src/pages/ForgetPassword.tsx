@@ -11,24 +11,29 @@ const ForgetPassword = () => {
   };
   return (
     <AuthWrapper>
+      <div className=" h-[470px]">
       <div className="text-center mb-12">
-        <Title>Forget Password</Title>
-        <p>Please enter your email and click send</p>
+      <Title className="mt-8 mb-6">Forget Password</Title>
       </div>
       <Form layout="vertical" onFinish={onFinish}>
-        <Form.Item label="Email" name="email">
-          <Input placeholder="Enter your email" style={{ height: "50px" }} />
-        </Form.Item>
+      <Form.Item name="email" label={<p className="text-white text-lg">Email Address</p>}>
+            <Input
+              placeholder="esteban_schiller@gmail.com"
+              className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent"
+              size="large"
+            />
+          </Form.Item>
 
         <Form.Item>
-          <Button
-            className="bg-secondary h-12 text-white text-lg w-full mt-6"
-            htmlType="submit"
+        <button
+            className="bg-red-600 h-12 text-white text-lg w-full mt-6  rounded  "
           >
             Send
-          </Button>
+          </button>
         </Form.Item>
       </Form>
+      </div>
+      
     </AuthWrapper>
   );
 };

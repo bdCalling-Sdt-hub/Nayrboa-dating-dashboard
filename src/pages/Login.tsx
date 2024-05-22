@@ -16,7 +16,7 @@ const Login = () => {
         <p className="text-[#F7F7F7]">Please enter your email and password to continue</p>
       </div>
       <Form layout="vertical" onFinish={onFinish} >
-      <Form.Item name="email" label={<p className="text-white text-lg">Email</p>}>
+      <Form.Item name="email" label={<p className="text-white text-lg">Email Address</p>}>
             <Input
               placeholder="esteban_schiller@gmail.com"
               className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent"
@@ -48,7 +48,7 @@ const Login = () => {
         <Form.Item> 
           
           <button
-            className="bg-red-800 h-12 text-white text-lg w-5/6 mt-6  rounded  ms-7 "
+            className="bg-red-600 h-12 text-white text-lg w-5/6 mt-6  rounded  ms-7 "
           >
             Sign In
           </button>

@@ -79,10 +79,7 @@ const menuItems = [
         path: "/about",
         title: "About Us",
       },
-      {
-        path: "/contact",
-        title: "Contact Us",
-      },
+     
       {
         path: "/terms-and-conditions",
         title: "Terms & Conditions",
