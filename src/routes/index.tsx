@@ -26,6 +26,7 @@ import ResetPassword from "@/pages/ResetPassword";
 import { createBrowserRouter } from "react-router-dom";
 import Subscription from "@/pages/Subscription";
 import ErrorPage from "@/pages/ErrorPage";
+import Notification from '@/pages/Notification'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <DashboardHome />,
+      },
+      {
+        path: "/notification",
+        element: <Notification />,
       },
       {
 

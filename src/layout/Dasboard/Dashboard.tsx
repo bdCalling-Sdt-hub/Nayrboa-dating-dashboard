@@ -5,6 +5,7 @@ import review from '@/assets/review.png'
 import mail from '@/assets/mail.png'
 import person from '@/assets/person.png'
 import subscription from '@/assets/subscription.png'
+import NotificationModal from "@/components/Notification/NotificationModal";
 import {
   Bell,
   LayoutDashboard,
@@ -16,6 +17,7 @@ import {
 } from "lucide-react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { useState } from "react";
 const { Header, Sider, Content } = Layout;
 
 const menuItems = [
@@ -33,21 +35,6 @@ const menuItems = [
     path: "/make-admin",
     title: "Make Admin",
     icon: <img src={admin} alt="" width={24} height={24}  />,
-    // path: "/manages",
-    // title: "Make Admin",
-    // icon: <img src={frame} alt="" width={24} height={24}  />,
-    // subMenu: [
-    //   {
-    //     path: "/promo-code",
-    //     title: "Manage Promo",
-    //     icon: <Container size={18} color="#fff" />,
-    //   },
-    //   {
-    //     path: "/packages",
-    //     title: "Manage Package",
-    //     icon: <Boxes size={18} color="#fff" />,
-    //   },
-    // ],
   },
   {
     path: "/createEvents",
@@ -123,6 +110,10 @@ const { SubMenu } = Menu;
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const showModal = () => {
+    setOpen(true);
+  };
 
   const handleLogout = () => {
     navigate("/auth/login");
@@ -223,23 +214,21 @@ const Dashboard = () => {
     </div>
 </div>
 
-<div className="flex items-center gap-5">
-            <Badge count={5} className="cursor-pointer">
-              <Bell size={30} color="#fff" />
+ {/* header notification   */}
+<div className="flex items-center gap-5 ">
+ 
+  <Badge count={5}  className="cursor-pointer" >
+              <Bell size={30} color="#fff"  onClick={showModal} />
             </Badge>
-           
-              <div
-            className="flex items-center gap-2 rounded-md  py-1.5 px-3 text-sm/6 bg-[#29363C]  text-white  "           
-            
-          >
+             <div
+            className="flex items-center gap-2 rounded-md  py-1.5 px-3 text-sm/6 bg-[#29363C]  text-white">
             <img src={person} alt="" width={22} height={22}  />
           <p>  Tushar</p> 
-          </div> 
-              
-           
+          </div>   
           </div>
+          
         </Header>
-
+        <NotificationModal open={open} setOpen={setOpen}/>
        
         <Content
           style={{
