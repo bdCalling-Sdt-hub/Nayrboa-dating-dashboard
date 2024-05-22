@@ -152,7 +152,7 @@ const TrainingProgram = () => {
      </div>
 
      <Flex vertical gap="small" style={{ width: '100%' }}>
-       <Button type="primary" block style={{height:"50px",backgroundColor:"red",marginTop:"10px",fontSize:"18px",fontWeight:"bold"}}>
+       <Button type="primary" block style={{height:"50px",backgroundColor:"red",marginTop:"10px",fontSize:"18px",fontWeight:"semibold"}}>
      
          Save event
        </Button>

@@ -1,5 +1,5 @@
 import {  Badge, Layout, Menu } from "antd";
-import frame from '@/assets/Frame.png'
+import admin from '@/assets/admin.png'
 import Calendar from '@/assets/calendar.png'
 import review from '@/assets/review.png'
 import mail from '@/assets/mail.png'
@@ -32,7 +32,7 @@ const menuItems = [
   {
     path: "/make-admin",
     title: "Make Admin",
-    icon: <img src={frame} alt="" width={24} height={24}  />,
+    icon: <img src={admin} alt="" width={24} height={24}  />,
     // path: "/manages",
     // title: "Make Admin",
     // icon: <img src={frame} alt="" width={24} height={24}  />,

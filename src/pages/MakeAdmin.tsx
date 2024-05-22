@@ -60,7 +60,7 @@ const MakeAdmin = () => {
   };
 
   return (
-    <div>
+    <div className=" bg-[#232D32] p-5 rounded ">
      
       <div className="flex justify-between items-center pb-5 pt-4  px-3">
       <h1 className="text-white text-2xl">Make Admin</h1>

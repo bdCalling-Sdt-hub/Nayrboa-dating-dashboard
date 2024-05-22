@@ -49,7 +49,7 @@ const AdminModel: React.FC<OfferModelProps> = ({ open, setOpen }) => {
           </Form.Item>
           <Form.Item name="email" label={<p className="text-white text-lg">User-Type</p>}>
             <Input
-              placeholder="Enter admin email"
+              placeholder="Admin"
               className="bg-[#2E3C43] border text-white border-[#3a3a3a] placeholder:text-gray-400 py-3 hover:bg-transparent focus:bg-transparent"
               size="large"
             />

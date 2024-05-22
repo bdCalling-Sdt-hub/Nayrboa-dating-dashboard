@@ -13,11 +13,11 @@ import downBtn from "@/assets/down.png";
 
 const data = [...Array(12).keys()].map((item, index) => ({
   sId: index + 1,
-  name: <div className=" flex  gap-2 items-center"> <img src={image} className="w-9 h-9 rounded-full" alt="" /> <span> Mithila</span> </div>  ,
+  name: <div className=" flex  gap-2 items-center justify-center"> <img src={image} className="w-9 h-9 rounded-full " alt="" /> <p> Mithila</p> </div>  ,
   email: "mithila@gmail.com" ,
   date: "December 9,2024" ,
   location: "Bangladesh" ,
-  rating: <div className=" flex  gap-2 items-center text-center"> <img src={rating} className="w-4 h-4 rounded" alt="" /> <span> (4.5)</span> </div> ,
+  rating: <div className=" flex  gap-2 items-center justify-center"> <img src={rating} className="w-4 h-4 rounded" alt="" /> <span> (4.5)</span> </div> ,
  
   action: {
     sId: index + 1,

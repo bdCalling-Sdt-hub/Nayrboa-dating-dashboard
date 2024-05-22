@@ -57,9 +57,9 @@ const Email = () => {
       dataIndex: "action",
       key: "action",
       render: (_: any, data: any) => (
-        <div className="flex items-center justify-center gap-3 px-3 py-1 rounded border border-red-900 w-1/2 mx-auto" onClick={showModal} >
+        <div className="flex items-center justify-center gap-3 px-3 py-1 rounded border border-red-600 w-1/2 mx-auto" onClick={showModal} >
           <img src={arrow} alt=""  />
-         <p className="text-red-900"> Replied </p>
+         <p className="text-red-600"> Replied </p>
        </div>
       ),
     },
@@ -77,7 +77,7 @@ const Email = () => {
 
   return (
     <div style={{backgroundColor:"#232d32",borderRadius:"5px",height:"98%",overflow:"scroll"}}>
-    <h1 class="text-xl text-gray-300" style={{paddingLeft:"20px",paddingTop:"20px",marginBottom:"20px",fontWeight:"bold"}}>Email</h1>
+    <h1 className="text-xl text-white" style={{paddingLeft:"30px",paddingTop:"20px",marginBottom:"20px",fontWeight:"semibold"}}>Email</h1>
   
     <Table
     
