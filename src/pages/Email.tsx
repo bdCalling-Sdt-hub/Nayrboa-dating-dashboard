@@ -4,16 +4,14 @@ import image from "../assets/user.jpg";
 import Title from "@/components/share/Title";
 import { Table } from "antd";
 import { Trash2 } from "lucide-react";
-import arrow from "@/assets/Frame.png"
+import arrow from "@/assets/Frame.png";
 import EmailModel from "@/components/Email/EmailModal";
 
 const data = [...Array(15).keys()].map((item, index) => ({
-  
-  
   name: "Fahim",
   discription: "Our Bachelor of Commerce program is ACBSP-accredited.",
-  time: "8:35 Am" ,
-  status: <p>  <Trash2 /> </p>,
+  time: "8:35 Am",
+
   action: {
     sId: index + 1,
     image: <img src={image} className="w-9 h-9 rounded" alt="" />,
@@ -25,17 +23,14 @@ const data = [...Array(15).keys()].map((item, index) => ({
   },
 }));
 
-
 const Email = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [open, setOpen] = useState(false);
   const showModal = () => {
     setOpen(true);
   };
-  const pageSize = 10;
+  const pageSize = 8;
   const columns = [
-    
-
     {
       title: "Name",
       dataIndex: "name",
@@ -51,22 +46,28 @@ const Email = () => {
       dataIndex: "time",
       key: "time",
     },
-   
+
     {
       title: <div className="text-center ">Action</div>,
       dataIndex: "action",
       key: "action",
       render: (_: any, data: any) => (
-        <div className="flex items-center justify-center gap-3 px-3 py-1 rounded border border-red-600 w-1/2 mx-auto" onClick={showModal} >
-          <img src={arrow} alt=""  />
-         <p className="text-red-600"> Replied </p>
-       </div>
+        <div className="flex items-center justify-center ">
+          <div className=" flex items-center gap-2 w-1/2 ">
+            <div
+              className="flex items-center justify-center gap-3 px-3 py-1 rounded border border-red-600  mx-auto"
+              onClick={showModal}
+            >
+              <img src={arrow} alt="" />
+              <p className="text-red-600"> Replied </p>
+            </div>
+            <button>
+              {" "}
+              <Trash2 />
+            </button>
+          </div>
+        </div>
       ),
-    },
-    {
-      title: " ",
-      dataIndex: "status",
-      key: "status",
     },
   ];
 
@@ -74,25 +75,40 @@ const Email = () => {
     setCurrentPage(page);
   };
 
-
   return (
-    <div style={{backgroundColor:"#232d32",borderRadius:"5px",height:"98%",overflow:"scroll"}}>
-    <h1 className="text-xl text-white" style={{paddingLeft:"30px",paddingTop:"20px",marginBottom:"20px",fontWeight:"semibold"}}>Email</h1>
-  
-    <Table
-    
-     dataSource={data}
-      columns={columns}
-      pagination={{
-        pageSize,
-        total: 50,
-        current: currentPage,
-        onChange: handlePage,
+    <div
+      style={{
+        backgroundColor: "#232d32",
+        borderRadius: "5px",
+        height: "100%",
+        // overflow: "scroll",
       }}
-      rowHoverable={false}
-    />
-     <EmailModel open={open} setOpen={setOpen} />
-  </div>
+    >
+      <h1
+        className="text-xl text-white"
+        style={{
+          paddingLeft: "30px",
+          paddingTop: "20px",
+          marginBottom: "20px",
+          fontWeight: "semibold",
+        }}
+      >
+        Contact Info
+      </h1>
+
+      <Table
+        dataSource={data}
+        columns={columns}
+        pagination={{
+          pageSize,
+          total: 50,
+          current: currentPage,
+          onChange: handlePage,
+        }}
+        rowHoverable={false}
+      />
+      <EmailModel open={open} setOpen={setOpen} />
+    </div>
   );
 };
 

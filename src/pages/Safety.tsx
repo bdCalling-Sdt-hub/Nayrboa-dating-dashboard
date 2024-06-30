@@ -3,10 +3,9 @@ import Title from "@/components/share/Title";
 import JoditEditor from "jodit-react";
 import { useRef, useState } from "react";
 
-const TermsAndCondition = () => {
+const Safety = () => {
   const editor = useRef(null);
   const [content, setContent] = useState("");
-
   return (
     <div
       style={{
@@ -16,7 +15,7 @@ const TermsAndCondition = () => {
         height: "82vh",
       }}
     >
-      <Title className="mb-4 p-3">Terms and Condition</Title>
+      <Title className="mb-4 p-3">Safety</Title>
       <JoditEditor
         ref={editor}
         value={content}
@@ -25,7 +24,7 @@ const TermsAndCondition = () => {
       />
       <div
         className="flex justify-end"
-        style={{ margin: "10px", marginBottom: "20px" }}
+        style={{ margin: "20px", marginBottom: "20px" }}
       >
         <Button>Save Changes</Button>
       </div>
@@ -33,4 +32,4 @@ const TermsAndCondition = () => {
   );
 };
 
-export default TermsAndCondition;
+export default Safety;

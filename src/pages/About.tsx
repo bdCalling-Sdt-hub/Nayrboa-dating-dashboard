@@ -8,7 +8,14 @@ const About = () => {
   const [content, setContent] = useState("");
 
   return (
-    <div style={{backgroundColor:"#1c2428",margin:"15px",borderRadius:"5px"}}>
+    <div
+      style={{
+        backgroundColor: "#1c2428",
+        margin: "15px",
+        borderRadius: "5px",
+        height: "82vh",
+      }}
+    >
       <Title className="mb-4 p-3">About</Title>
       <JoditEditor
         ref={editor}
@@ -16,8 +23,11 @@ const About = () => {
         config={{ height: 600 }}
         onBlur={(newContent) => setContent(newContent)}
       />
-      <div className="flex justify-end" style={{margin:"10px",marginBottom:"20px"}}>
-        <Button >Save Changes</Button>
+      <div
+        className="flex justify-end"
+        style={{ margin: "20px", marginBottom: "20px" }}
+      >
+        <Button>Save Changes</Button>
       </div>
     </div>
   );

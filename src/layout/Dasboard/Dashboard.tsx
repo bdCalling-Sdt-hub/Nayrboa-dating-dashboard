@@ -1,10 +1,10 @@
-import {  Badge, Layout, Menu } from "antd";
-import admin from '@/assets/admin.png'
-import Calendar from '@/assets/calendar.png'
-import review from '@/assets/review.png'
-import mail from '@/assets/mail.png'
-import person from '@/assets/person.png'
-import subscription from '@/assets/subscription.png'
+import { Badge, Layout, Menu } from "antd";
+import admin from "@/assets/admin.png";
+import Calendar from "@/assets/calendar.png";
+import review from "@/assets/review.png";
+import mail from "@/assets/mail.png";
+import person from "@/assets/person.png";
+import subscription from "@/assets/subscription.png";
 import NotificationModal from "@/components/Notification/NotificationModal";
 import {
   Bell,
@@ -34,27 +34,27 @@ const menuItems = [
   {
     path: "/make-admin",
     title: "Make Admin",
-    icon: <img src={admin} alt="" width={24} height={24}  />,
+    icon: <img src={admin} alt="" width={24} height={24} />,
   },
   {
     path: "/createEvents",
     title: "Create an events",
-    icon: <img src={Calendar} alt="" width={24} height={24}/>,
+    icon: <img src={Calendar} alt="" width={24} height={24} />,
   },
   {
     path: "/totalReview",
     title: "Total Review",
-    icon: <img src={review} alt="" width={24} height={24}/>,
+    icon: <img src={review} alt="" width={24} height={24} />,
   },
   {
     path: "/email",
-    title: "Email",
-    icon: <img src={mail} alt="" width={24} height={24}/>,
+    title: "Contact",
+    icon: <img src={mail} alt="" width={24} height={24} />,
   },
   {
     path: "/subscription",
     title: "Subscription",
-    icon: <img src={subscription} alt="" width={24} height={24}/>,
+    icon: <img src={subscription} alt="" width={24} height={24} />,
   },
 
   {
@@ -66,7 +66,7 @@ const menuItems = [
         path: "/about",
         title: "About Us",
       },
-     
+
       {
         path: "/terms-and-conditions",
         title: "Terms & Conditions",
@@ -79,13 +79,13 @@ const menuItems = [
         path: "/change-password",
         title: "Change Password",
       },
-      
+
       {
-        path: "/profile",
-        title: "Profile",
+        path: "/safety",
+        title: "Safety",
       },
     ],
-  }, 
+  },
 ];
 
 const content = (
@@ -122,22 +122,24 @@ const Dashboard = () => {
     <Layout>
       <Sider
         width={300}
-        
         className="sidebar-menu "
         style={{
           overflow: "auto",
           zIndex: 2,
           backgroundColor: "#232D32",
-          height:"100vh"
+          height: "100vh",
         }}
         trigger={null}
       >
-        <img src={logo} alt="" className=" mx-auto mb-[34px] mt-[50px] w-[100px] h-[47px] " />
+        <img
+          src={logo}
+          alt=""
+          className=" mx-auto mb-[34px] mt-[50px] w-[100px] h-[47px] "
+        />
         <Menu
           mode="inline"
           className="mx-auto"
-          style={{ background: "#232D32", color: "white" , width: '232px'   }}
-         
+          style={{ background: "#232D32", color: "white", width: "232px" }}
           defaultSelectedKeys={["1"]}
         >
           {menuItems.map((item, index) =>
@@ -145,17 +147,20 @@ const Dashboard = () => {
               <SubMenu
                 key={`sub-${index}`}
                 icon={item.icon}
-                style={{ color: "#fff", fontSize: "16px" , marginBottom: "50px" }}
+                style={{
+                  color: "#fff",
+                  fontSize: "16px",
+                  marginBottom: "20px",
+                }}
                 title={item.title}
               >
                 {item.subMenu.map((subItem, subIndex) => (
                   <Menu.Item
                     key={`sub-${index}-${subIndex}`}
-                   
                     style={{
                       color: "#fff",
                       fontSize: "16px",
-                      marginTop: "30px",
+                      marginTop: "10px",
                     }}
                   >
                     <Link to={`${item.path}${subItem.path}`}>
@@ -171,7 +176,7 @@ const Dashboard = () => {
                 style={{
                   color: "#fff",
                   fontSize: "16px",
-                  marginBottom: "50px",
+                  marginBottom: "30px",
 
                   // background: pathname === "/" ? "#DD1122" : "",
                 }}
@@ -192,52 +197,40 @@ const Dashboard = () => {
         </Menu>
       </Sider>
       <Layout>
-
-      <Header className=" flex justify-between items-center px-0 ps-5 pr-5 bg-black pt-[50px]"
-          style={{ 
-            height: "100px",    
+        <Header
+          className=" flex justify-between items-center px-0 ps-5 pr-5 bg-black pt-[15px]"
+          style={{
+            height: "100px",
           }}
         >
-          <div className='max-w-md   text-white  rounded-md'>
-    <div className="relative flex items-center w-[512px] h-12 rounded-lg focus-within:shadow-lg bg-[#1C2428] overflow-hidden">
-        <div className="grid place-items-center h-full  text-white p-3">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        </div>
-
-        <input
-        className="peer h-full w-full outline-none text-sm  pr-2 bg-[#1C2428]"
-        type="text"
-        id="search"
-        placeholder="Search something.." /> 
-    </div>
-</div>
-
- {/* header notification   */}
-<div className="flex items-center gap-5 ">
- 
-  <Badge count={5}  className="cursor-pointer" >
-              <Bell size={30} color="#fff"  onClick={showModal} />
+          <div> </div>
+          {/* header notification   */}
+          <div className="flex items-center gap-5 ">
+            <Badge count={5} className="cursor-pointer">
+              <Bell size={30} color="#fff" onClick={showModal} />
             </Badge>
-             <div
-            className="flex items-center gap-2 rounded-md  py-1.5 px-3 text-sm/6 bg-[#29363C]  text-white">
-            <img src={person} alt="" width={22} height={22}  />
-          <p>  Tushar</p> 
-          </div>   
+
+            <Link to="/profile">
+              {" "}
+              <div className="flex items-center gap-2 rounded-md  py-1.5 px-3 text-sm/6 bg-[#29363C]  text-white">
+                <img src={person} alt="" width={22} height={22} />
+                <p> Tushar</p>
+              </div>
+            </Link>
           </div>
-          
         </Header>
-        <NotificationModal open={open} setOpen={setOpen}/>
-       
+        <NotificationModal open={open} setOpen={setOpen} />
+
         <Content
           style={{
-            background: "black",   
-                 
+            background: "black",
           }}
         >
-          <div className="rounded p-5" style={{width:"100%",height:"89vh"}}>
-            <Outlet/>
+          <div
+            className="rounded p-5 pt-0"
+            style={{ width: "100%", height: "80vh" }}
+          >
+            <Outlet />
           </div>
         </Content>
       </Layout>

@@ -15,3 +15,6 @@
   background: #404141;
 }
 
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  background: #2e3c43;
+}

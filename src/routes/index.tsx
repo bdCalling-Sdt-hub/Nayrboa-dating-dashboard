@@ -13,7 +13,6 @@ import MakeAdmin from "@/pages/MakeAdmin";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Profile from "@/pages/Profile";
 
-
 import SetNewPassword from "@/pages/SetNewPassword";
 import Settings from "@/pages/Settings";
 import TotalUser from "@/pages/TotalUser";
@@ -26,13 +25,14 @@ import ResetPassword from "@/pages/ResetPassword";
 import { createBrowserRouter } from "react-router-dom";
 import Subscription from "@/pages/Subscription";
 import ErrorPage from "@/pages/ErrorPage";
-import Notification from '@/pages/Notification'
+import Notification from "@/pages/Notification";
+import Safety from "@/pages/Safety";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
-    errorElement: <ErrorPage />, 
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -43,10 +43,8 @@ const router = createBrowserRouter([
         element: <Notification />,
       },
       {
-
         path: "/user-details",
         element: <PurchasedPackageList />,
-
       },
       {
         path: "/user-list",
@@ -78,7 +76,7 @@ const router = createBrowserRouter([
         path: "/settings",
         element: <Settings />,
       },
-     
+
       {
         path: "/settings/terms-and-conditions",
         element: <TermsAndCondition />,
@@ -92,8 +90,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/settings/profile",
-        element: <ProfilePage/>,
+        path: "/settings/safety",
+        element: <Safety />,
       },
 
       {

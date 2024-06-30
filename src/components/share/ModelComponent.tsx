@@ -8,6 +8,7 @@ const { Option } = Select;
 
 const ModelComponent = ({ openModel, setOpenModel, data, type }) => {
   const [imageUrl, setImageUrl] = useState("");
+  const [articleUrl, setArticleUrl] = useState("");
   console.log(data);
   const { image, action, ...userData } = data;
   const handleImage = (e: any) => {
@@ -15,6 +16,12 @@ const ModelComponent = ({ openModel, setOpenModel, data, type }) => {
     const url = URL.createObjectURL(file);
     setImageUrl(url);
   };
+  const handleArticle = (e: any) => {
+    const file = e.target.files?.[0];
+    const url = URL.createObjectURL(file);
+    setArticleUrl(url);
+  };
+
   const hideModal = () => {
     setOpenModel(false);
   };
@@ -66,16 +73,16 @@ const ModelComponent = ({ openModel, setOpenModel, data, type }) => {
               <input
                 type="file"
                 className=" hidden"
-                id="image"
-                onChange={handleImage}
+                id="image1"
+                onChange={handleArticle}
               />
               <label
-                htmlFor="image"
+                htmlFor="image1"
                 className="w-full border rounded flex justify-center items-center h-24 cursor-pointer"
               >
-                {imageUrl ? (
+                {articleUrl ? (
                   <img
-                    src={imageUrl}
+                    src={articleUrl}
                     className="w-full h-full object-cover rounded"
                     alt=""
                   />
